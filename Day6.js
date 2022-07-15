@@ -141,6 +141,11 @@ const countries = [
   
   
   //12 Develop a small script which generate array of 5 random numbers
+  for (let i = 0; i<5; i++){
+
+    let randomNumber = i * Math.floor(Math.random() * 10)
+    
+  }
   
   
   
@@ -152,4 +157,10 @@ const countries = [
   // 5j2khz
   
   
+
   
+
+
+
+
+

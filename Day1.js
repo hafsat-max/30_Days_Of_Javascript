@@ -29,3 +29,46 @@ console.log(typeof(fName));
 // You are 30 years old.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+for(let loop= 0; loop< Array.length; )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
