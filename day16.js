@@ -106,18 +106,38 @@ const txt = `{
 
 // Exercises Level 1
 // Change skills array to JSON using JSON.stringify()
-const newSkills = JSON.stringify(skills, undefined, 0)
+const newSkills = JSON.stringify(skills, undefined, 9)
 console.log(newSkills)
 
 // Stringify the age variable
 const newAge = JSON.stringify(age)
 
 // Stringify the isMarried variable
-
+const isMarriedd = JSON.stringify(isMarried)
 
 // Stringify the student object
+const students = JSON.stringify(student)
+
 // Exercises Level 2
 // Stringify the students object with only firstName, lastName and skills properties
+const newStudents = JSON.stringify(student,['firstName', 'lastName', 'country', 'city', 'age'],4)
+console.log(newStudents)
+
+
+
 // Exercises Level 3
-// Parse the txt JSON to object.
+// Parse the txt JSON to object.new
+const newObJ = JSON.parse(txt)
+
 // Find the user who has many skills from the variable stored in txt.
+let max= 0
+let mostSkilled;
+
+for (const person in newObJ){
+    let userSkill = newObJ[person].skills.length
+    if(userSkill > max){
+         max = userSkill; 
+         mostSkilled= `${person.toUpperCase()}, has the highest skills of ${max}`} 
+}
+console.log(mostSkilled)
+
