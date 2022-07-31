@@ -15,7 +15,7 @@ let allCountry= []
 console.log(allCountry)
 
 // Use forEach to console.log each name in the names array.
-names.forEach(name =>{
+names.forEach((name, index) =>{
   console.log(name)
 })
 
@@ -130,7 +130,7 @@ const ans =numbers.reduce((a,b) =>
 
 
 
-// Use every to check if all the countries contain the word land
+// Use every to check if all the countries contain the word land 
 // Explain the difference between find and findIndex.
 // Use find to find the first country containing only six letters in the countries array
 // Use findIndex to find the position of the first country containing only six letters in the countries array

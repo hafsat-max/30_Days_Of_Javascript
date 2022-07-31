@@ -6,28 +6,37 @@
 let challenge = '30 Days Of JavaScript'
 
 // 2 Print the string on the browser console using console.log()
+
 //3 Print the length of the string on the browser console using console.log()
 console.log(challenge.length)
+
 //4 Change all the string characters to capital letters using toUpperCase() method
 console.log(challenge.toUpperCase())
+
 
 //5 Change all the string characters to lowercase letters using toLowerCase() method
 console.log(challenge.toLowerCase())
 
+
 //6 Cut (slice) out the first word of the string using substr() or substring() method
 console.log(challenge.substring(2))
+
 
 //7 Slice out the phrase Days Of JavaScript from 30 Days Of JavaScript.
 console.log(challenge.substring(0, 2 ))
 
+
 //8 Check if the string contains a word Script using includes() method
 console.log(challenge.includes('Script'))
+
 
 //9 Split the string into an array using split() method
 console.log(challenge.split()) 
 
+
 //10 Split the string 30 Days Of JavaScript at the space using split() method
 console.log(challenge.split(" "))
+
 
 //11 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' split the string at the comma and change it to an array.
 let arr = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
@@ -71,6 +80,9 @@ console.log(newString.endsWith())
 // Use match() method to find all the a’s in 30 Days Of JavaScript
 console.log(newString.match(/a/g))
 
+let p = 'ermeegkg'
+console.log(namm = p.match(/e/g).length)
+
 
 // Use concat() and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
 let first = '30 Days of'
@@ -91,6 +103,8 @@ console.log(num === str)
 // Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
 console.log(parseFloat(9.8))
 console.log(Math.ceil(9.8))
+console.log(9.448.toFixed(2))
+
 
 // Check if 'on' is found in both python and jargon
 let nString = 'python'
@@ -118,6 +132,9 @@ console.log(' 1 1 1 1 1 \n 2 1 2 4 8 \n 3 1 3 9 27 ')
 // 1 1 1 1 1
 // 2 1 2 4 8
 // 3 1 3 9 27
+
+
+
 // 4 1 4 16 64
 // 5 1 5 25 125
 // Use substr to slice out the phrase because because because from the following sentence:'You cannot end a sentence with because because because is a conjunction' 

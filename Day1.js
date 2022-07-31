@@ -41,7 +41,6 @@ console.log(typeof(fName));
 
 
 
-for(let loop= 0; loop< Array.length; )
 
 
 

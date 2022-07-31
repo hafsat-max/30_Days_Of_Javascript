@@ -37,14 +37,15 @@ const countries = [
   //     #####
   //     ######
   //     ####### 
-  //ANSWER let i; let result
-  // for(i=0; i<10; i++ ){
-  //   for(j= 0; j< i; j++){
-  //    result += ('#');
-  //   }
-  //   console.log(result)
-  //   result = " "
-  // }
+  //ANSWER
+    let i; let result
+  for(i=0; i<10; i++ ){
+    for(j= 0; j< i; j++){
+     result += ('#');
+    }
+    console.log(result)
+    result = " "
+  }
   
   
   //4 Use loop to print the following pattern:
@@ -102,13 +103,13 @@ const countries = [
   
   
   //8 Use for loop to iterate from 0 to 100 and print only prime numbers
-  //ANSWER for(i=0; i<=100; i++){
-  //   if (i % 2 === 0 || i % 3 === 0 || i % 5 === 0 || i % 7 === 0){
+   for(i=0; i<=100; i++){
+    if (i % 2 === 0 || i % 3 === 0 || i % 5 === 0 || i % 7 === 0){
       
-  //   }else {
-  //     console.log(i)
-  //   }
-  // }
+    }else {
+      console.log(i)
+    }
+  }
   
   
   //9 Use for loop to iterate from 0 to 100 and print the sum of all numbers.
