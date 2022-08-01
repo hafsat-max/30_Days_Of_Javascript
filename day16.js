@@ -127,17 +127,16 @@ console.log(newStudents)
 
 // Exercises Level 3
 // Parse the txt JSON to object.new
-const newObJ = JSON.parse(txt)
+const newObj = JSON.parse(txt)
 
 // Find the user who has many skills from the variable stored in txt.
 let max= 0
 let mostSkilled;
 
-for (const person in newObJ){
+for (const person in newObj){
     let userSkill = newObJ[person].skills.length
     if(userSkill > max){
          max = userSkill; 
          mostSkilled= `${person.toUpperCase()}, has the highest skills of ${max}`} 
 }
 console.log(mostSkilled)
-
