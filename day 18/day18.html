@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style> .list {
-        counter-reset: list-number;
-      }</style>
+    <style>
+        div.list {
+          counter-reset: list-number;
+        }
+        /** Note that we can use counter-increment in :before psuedo element **/
+        div.list div:before {
+          counter-increment: list-number;
+          content: counter(list-number);
+        }
+      </style>
 </head>
 <body>
     <div class="list">
@@ -17,8 +24,6 @@
       </div>
       
       
-
-    
 </body>
-<script ></script>
+<script src="./day18.js"></script>
 </html>

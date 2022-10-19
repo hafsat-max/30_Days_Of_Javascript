@@ -24,13 +24,7 @@ const txt = `{
         "email": "asab@asab.com",
         "skills": [
             "HTML",
-            "CSS",
-            "JavaScript",
-            "Redux",
-            "MongoDB",
-            "Express",
-            "React",
-            "Node"
+            "CSS"
         ],
         "age": 25,
         "isLoggedIn": false,
@@ -127,16 +121,36 @@ console.log(newStudents)
 
 // Exercises Level 3
 // Parse the txt JSON to object.new
-const newObj = JSON.parse(txt)
-
+// const newObj = JSON.parse(txt)
+// console.log(newObj)
 // Find the user who has many skills from the variable stored in txt.
 let max= 0
 let mostSkilled;
 
-for (const person in newObj){
-    let userSkill = newObJ[person].skills.length
-    if(userSkill > max){
-         max = userSkill; 
-         mostSkilled= `${person.toUpperCase()}, has the highest skills of ${max}`} 
-}
-console.log(mostSkilled)
+// for (const person in newObj){
+//     let userSkill = newObj[person].skills.length
+//     if(userSkill > max){
+//         console.log(newObj[person])
+//          max = userSkill; 
+//          mostSkilled= `${person.toUpperCase()}, has the highest skills of ${max}`} 
+// }
+// console.log(mostSkilled)
+
+
+
+const newObject= JSON.parse(txt, 
+    function (key, value){
+        console.log(key)
+        console.log(value)
+       if(key == 'skills'){
+        let userSkill = value.length
+            if(userSkill > max){
+                console.log(value)
+                max = userSkill; 
+                mostSkilled= key
+            }
+        }
+    return mostSkilled
+    })
+
+console.log(newObject)

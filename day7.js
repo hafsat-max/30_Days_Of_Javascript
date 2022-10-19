@@ -143,7 +143,7 @@ console.log(printArray(num))
 
 // showDateTime()
 // 08/01/2020 04:08
-|
+
 // Declare a function name swapValues. This function swaps value of x to y.
 
 // swapValues(3, 4) // x => 4, y=>3

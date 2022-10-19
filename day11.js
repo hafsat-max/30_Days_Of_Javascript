@@ -82,60 +82,64 @@ const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
 
 
 // A junior developer structure student name, skills and score in array of arrays which may not easy to read.
-//  Destructure the following array name to name, skills array to skills, scores array to scores, 
+//  De structure the following array name to name, skills array to skills, scores array to scores, 
 // JavaScript score to jsScore and React score to reactScore variable in one line.
 
   const student = ['David', ['HTML', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
-  const [name,skills ,[html, css, jsScore, reactScore]] = student
+//   const [name,skills ,[html, css, jsScore, reactScore]] = student
 
-  console.log(name, skills, jsScore, reactScore)
+//   console.log(name, skills, jsScore, reactScore)
 
 
 // Write a function called convertArrayToObject which can convert the array to a structure object.
-//     const students = [
-//         ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
-//         ['John', ['HTM', 'CSS', 'JS', 'React'], [85, 80, 85, 80]]
-//       ]
+    const students = [
+        ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
+        ['John', ['HTM', 'CSS', 'JS', 'React'], [85, 80, 85, 80]]
+      ]
+let obj= []
+      function convertArrayToObject(item){
+        for(let [name, [skills], [scores]] of item){
+           obj += `{name: ${name}, \n skills: ${skills}, \n scores: ${scores} }` 
+        }
+        return obj
+      }
+    console.log(convertArrayToObject(students))
 
-//     console.log(convertArrayToObject(students))
-//     [
-//       {
-//         name: 'David',
-//         skills: ['HTM','CSS','JS','React'],
-//         scores: [98,85,90,95]
-//       },
-//       {
-//         name: 'John',
-//         skills: ['HTM','CSS','JS','React'],
-//         scores: [85, 80,85,80]
-//       }
-//     ]
+ 
+    const studentt = {
+      initials: 'David',
+      age: 25,
+      skills: {
+        frontEnd: [
+          { skill: 'HTML', level: 10 },
+          { skill: 'CSS', level: 8 },
+          { skill: 'JS', level: 8 },
+          { skill: 'React', level: 9 }
+        ],
+        backEnd: [
+          { skill: 'Node',level: 7 },
+          { skill: 'GraphQL', level: 8 },
+        ],
+        dataBase:[
+          { skill: 'MongoDB', level: 7.5 },
+        ],
+        dataScience:['Python', 'R', 'D3.js']
+      }
+    }
+
+     
 // Copy the student object to newStudent without mutating the original object. In the new object add the following ?
+const newStudent = {...studentt,  }
+
 // Add Bootstrap with level 8 to the front end skill sets
+console.log(newStudent)
+
+
 // Add Express with level 9 to the back end skill sets
 // Add SQL with level 8 to the data base skill sets
 // Add SQL without level to the data science skill sets
-//     const student = {
-//       name: 'David',
-//       age: 25,
-//       skills: {
-//         frontEnd: [
-//           { skill: 'HTML', level: 10 },
-//           { skill: 'CSS', level: 8 },
-//           { skill: 'JS', level: 8 },
-//           { skill: 'React', level: 9 }
-//         ],
-//         backEnd: [
-//           { skill: 'Node',level: 7 },
-//           { skill: 'GraphQL', level: 8 },
-//         ],
-//         dataBase:[
-//           { skill: 'MongoDB', level: 7.5 },
-//         ],
-//         dataScience:['Python', 'R', 'D3.js']
-//       }
-//     }
-// The copied object output should look like this:
+    console.log(newStudent)
+// The copied object output should look like this:~!
 
 //     {
 //     name: 'David',
@@ -160,4 +164,7 @@ const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
 //       dataScience: ['Python','R','D3.js','SQL']
 //     }
 //   }
+
+
+
 

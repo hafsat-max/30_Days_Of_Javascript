@@ -64,7 +64,8 @@ const countries = [
   //   console.log(`${i} * ${i} = ${i * i}`)
   // }
   
-  
+
+
   //5 Using loop print the following pattern
   
   //  i    i^2   i^3
@@ -103,10 +104,9 @@ const countries = [
   
   
   //8 Use for loop to iterate from 0 to 100 and print only prime numbers
-   for(i=0; i<=100; i++){
-    if (i % 2 === 0 || i % 3 === 0 || i % 5 === 0 || i % 7 === 0){
-      
-    }else {
+   for(i=4; i<=100; i++){
+    // console.log(i)
+    if(i%3!=0 && i%2!=0 && i%5!=0 && i%7!=0){
       console.log(i)
     }
   }

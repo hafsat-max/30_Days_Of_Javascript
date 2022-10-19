@@ -43,14 +43,18 @@ let j = 'jargon'
 // Use the Date object to do the following activities
 
 // What is the year today?
-// const now = new Date
+const now = new Date(2022,7, 0) 
+console.log(now.getDate())
+time= 45
+console.log(time.toString().padStart(2,0))
+
 // console.log(now.getDay())        
 
 // What is the month today as a number?
 // console.log(now.getTime())
 
 // What is the date today?
-// console.log(now.getDate())
+
 // What is the day today as a number?
 // What is the hours now?
 // console.log(now.getHours())
@@ -145,7 +149,7 @@ let j = 'jargon'
 // let userBirth = parseInt(prompt('What year were you born?'))
 // let now = new Date
 // let theYear = (now.getFullYear())
-// eligibility = parseInt(theYear - userBirth)
+// eligibility = parseInt(theYear - userBirth)`
 // if (eligibility > 18 ){
 //     console.log(`you are ${eligibility}. you are eligible to drive a car.`)
 // } else{
