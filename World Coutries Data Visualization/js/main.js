@@ -76,28 +76,32 @@ let languageCount =  Object.values(count).sort((a,b)=> b-a).slice(0,10)
 console.log(languageCount)
 
 let resultAr = lang.map( function (value, index){
-    value
-    return {[value]: languageCount[index]}
+
+    return {name: value, language: languageCount[index]}
 });
 console.log(resultAr)
 
-
 // let tray = []
 // tray.forEach(item =>{
-//     console.log(item)
-//     tray.push({name:lang, count: count})
-//     console.log(tray)
-// })
+    //     console.log(item)
+    //     tray.push({name:lang, count: count})
+    //     console.log(tray)
+    // })
+    
+    
+    
+    // button event listener to display the result
+    mostLanguages.addEventListener('click', function(){
+        populationResult.style.display = 'none';
+        
+        const newTable = document.createElement("table");
+        newTable.innerHTML = "<thead><th>Name</th><th>Population</th></thead>";
+    
+        for(let v of resultAr){
 
-
-
-// button event listener to display the result
-mostLanguages.addEventListener('click', function(){
-    populationResult.style.display = 'none';
-
-    const newTable = document.createElement("table");
-    newTable.innerHTML = "<thead><th>Name</th><th>Population</th></thead>";
-  
+        }
+        console.log(Object.keys(resultAr))
+        
 })
     
 
