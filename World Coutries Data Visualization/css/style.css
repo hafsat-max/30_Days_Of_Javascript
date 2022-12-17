@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    color: rgb(226, 154, 19);
+}
+h4{
+    text-align: center;
+}
+
+.graph-buttons{
+    width: 200px;
+    margin: auto;
+}
+
+.population, .languages{
+    color: white;
+    background-color: rgb(226, 154, 19);
+    border-color: rgb(226, 154, 19);
+    padding: 5px;
+    margin: 5px;
+}
+
+.populationResult, .languagesResult{
+    box-sizing: border-box;
+    margin-top: 10px;
+    /* color: white; */
+}
+li{
+    list-style: none;
+    padding-bottom: 10px;
+}
