@@ -19,11 +19,11 @@ form.addEventListener("submit", (e) => {
 
 let planet = "";
 planetOpt.addEventListener("change", function () {
-    planet = this.value
+    planet = this.value.split(' ')
 })
 
-function workingFunction() {
-    return submitButton.addEventListener("click", () => {
+
+     submitButton.addEventListener("click", () => {
         if (input.value === undefined || input.value === "") {
             error.style.display = 'block';
             card.style.display = 'none';
@@ -33,10 +33,9 @@ function workingFunction() {
             image.style.display = 'block';
             error.style.display = 'none';
             card.style.display = 'block';
-            weight.innerHTML =  (input.value * planetOpt.value).toFixed(3);
-            console.log(planetOpt.value)
+            weight.innerHTML =  (input.value * planet[1]).toFixed(2);
             
-            planetImage.src= `./images/${planet.text.toLowerCase()}.png`
+            planetImage.src= `./images/${planet[0]}.png`
             console.log(planet.text)
             console.log('first')
 
@@ -44,8 +43,7 @@ function workingFunction() {
         }
     })
 
-}
-workingFunction();
+
 
 
 // Earth's gravity = 9.8
