@@ -77,7 +77,7 @@ console.log(languageCount)
 
 let resultAr = lang.map( function (value, index){
 
-    return {name: value, language: languageCount[index]}
+    return {language: value, count: languageCount[index]}
 });
 console.log(resultAr)
 
@@ -93,17 +93,39 @@ console.log(resultAr)
     // button event listener to display the result
     mostLanguages.addEventListener('click', function(){
         populationResult.style.display = 'none';
+        languageResult.style.display='block';
         
-        const newTable = document.createElement("table");
-        newTable.innerHTML = "<thead><th>Name</th><th>Population</th></thead>";
-    
-        for(let v of resultAr){
-
+        const newTables = document.createElement("table");
+        newTables.innerHTML = "<thead><th>Language</th><th>Count</th></thead>";
+        for(const {language, count} of resultAr){
+            const newRow = document.createElement("tr");
+            const languageData= document.createElement("td");
+            const countData = document.createElement("td");
+            languageData.textContent = language;
+            countData.textContent = count;
+            newRow.appendChild(languageData);
+            newRow.appendChild(countData);
         }
-        console.log(Object.keys(resultAr))
-        
+              
+        languageResult.appendChild(newTables);    
 })
-    
+// const newTable = document.createElement("table");
+// newTable.innerHTML = "<thead><th>Name</th><th>Population</th></thead>";
+// for (const { name, population } of populated) {
+
+//     const newRow = document.createElement("tr");
+//     const countries = document.createElement("td");
+//     const populations = document.createElement("td");
+//     countries.textContent = name;
+//     populations.textContent = population;
+//     newRow.appendChild(countries);
+//     newRow.appendChild(populations);
+//     newTable.appendChild(newRow);
+// }
+
+// populationResult.appendChild(newTable);
+// })
+
 
  
 
